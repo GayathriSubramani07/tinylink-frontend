@@ -99,10 +99,11 @@
   const emptyState = document.getElementById("emptyState");
   const searchBox = document.getElementById("searchBox");
 
-  // ✅ Updated Backend URL
+  
   const API = "https://tinylink-backend-tyfm.onrender.com/api/links";
-  // ✅ Frontend Domain for Display
-  const BASE_URL = "https://tinylink-frontend-2yqq.onrender.com/";
+
+  const BASE_URL = "https://tinylink-backend-tyfm.onrender.com/";
+
 
   function updateStats(links) {
     document.getElementById("totalLinks").textContent = links.length;
