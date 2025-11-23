@@ -128,14 +128,14 @@
       emptyState.classList.add("hidden");
       links.forEach((l) => {
         const shortUrl = BASE_URL + l.code;
-        // ✅ Correct IST time display fix
-        const lastClicked = l.lastclicked
-          ? new Date(l.lastclicked + 'Z').toLocaleString("en-IN", { 
-              timeZone: "Asia/Kolkata",
-              day: "2-digit", month: "short", year: "numeric",
-              hour: "numeric", minute: "2-digit", hour12: true
-            })
-          : "—";
+        
+    const lastClicked = l.lastclicked
+  ? new Date(l.lastclicked).toLocaleString("en-IN", { 
+      day: "2-digit", month: "short", year: "numeric",
+      hour: "numeric", minute: "2-digit", hour12: true
+    })
+  : "—";
+
 
         const row = document.createElement("tr");
         row.className = "hover:bg-purple-50 transition-colors animate-slide-in";
